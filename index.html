@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Länkar min script.js-->
+    <script src="script.js" defer></script>
+
+    <!-- skapade en style för att dölja de vyer som jag ej ville visa.-->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <!-- Lägger knappen för "städer" jag besökt utanför mina vyer då jag vulle att den skulle visas i alla tre vyer. -->
+    <div>
+        <button onclick="showView('visitedCitiesView')">Städer jag Besökt</button>
+    </div>
+
+    <!-- Börjar med att dela upp mitt projekt i tre olika vyer.-->
+
+    <!-- skapar min första vy som visar tre länder-->
+    <div id="landView" class="view">
+        <h2>Välj ett land</h2>
+        <ul id="land-list"></ul>
+    </div>
+
+    <!-- Skapar vyn med de olika städerna-->
+    <div id="cityView" class="view">
+        <h2>Städer</h2>
+        <!-- Här visas listan med städerna när ett land klickas på -->
+        <ul id="city-details"></ul> 
+        <!-- Skapar en knapp i denna vyn för att användaren ska kunna gå tillbaka till "landView" i denna vy-->
+        <button onclick="showView('landView')">Tillbaka till Länder</button> 
+    </div>
+
+    <!-- Skapar en vy för att visa de besökta städerna -->
+    <div id="visitedCitiesView" class="view">
+        <h2>Besökta Städer</h2>
+        <!-- Här visas besökta städer -->
+        <ul id="visited-list"></ul> 
+        <!--Skapar en knapp för att ränsa de besökta städerna-->
+        <button id="clearVisited">Rensa besökta städer</button>
+        <!-- Skapar en knapp i denna vyn för att användaren ska kunna gå tillbaka till "landView" i denna vy-->
+        <button onclick="showView('landView')">Tillbaka till Länder</button>
+    </div>
+</body>
+</html>

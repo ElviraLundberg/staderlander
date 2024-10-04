@@ -1,0 +1,7 @@
+/* för att bestämma vilken vy som ska visas*/
+.view {
+    display: none; 
+}
+.active {
+    display: block; 
+}
